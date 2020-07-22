@@ -49,31 +49,46 @@ var sightingduration = tableData.map(function(data) {
   return data.durationMinutes;
 });
 
+var uniqueCountry = Array.from(new Set(sightingcountry));
+  console.log(uniqueCountry);
+
+var uniqueState = Array.from(new Set(sightingstate));
+console.log(uniqueState);
+
+var uniqueCity = Array.from(new Set(sightingcity));
+console.log(uniqueCity);
+
+var uniqueShape = Array.from(new Set(sightingshape));
+console.log(uniqueShape);
+
+var uniqueDuration = Array.from(new Set(sightingduration));
+console.log(uniqueDuration);
+
 
 // add the lists from above to the dropdown filters
 
 var selCountry = d3.select('#country');
-sightingcountry.forEach(function(country){
+uniqueCountry.forEach(function(country){
   selCountry.append("option").text(country)
 });
 
 var selState = d3.select('#state');
-sightingstate.forEach(function(state){
+uniqueState.forEach(function(state){
   selState.append("option").text(state)
 });
 
 var selCity = d3.select('#city');
-sightingcity.forEach(function(city){
+uniqueCity.forEach(function(city){
   selCity.append("option").text(city)
 });
 
 var selShape = d3.select('#shape');
-sightingshape.forEach(function(shape){
+uniqueShape.forEach(function(shape){
   selShape.append("option").text(shape)
 });
 
 var selDuration = d3.select('#duration');
-sightingduration.forEach(function(durationMinutes){
+uniqueDuration.forEach(function(durationMinutes){
   selDuration.append("option").text(durationMinutes)
 });
 
