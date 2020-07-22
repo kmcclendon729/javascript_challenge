@@ -50,18 +50,23 @@ var sightingduration = tableData.map(function(data) {
 });
 
 var uniqueCountry = Array.from(new Set(sightingcountry));
+  uniqueCountry.sort();
   console.log(uniqueCountry);
 
 var uniqueState = Array.from(new Set(sightingstate));
-console.log(uniqueState);
+  uniqueState.sort();
+  console.log(uniqueState);
 
 var uniqueCity = Array.from(new Set(sightingcity));
+uniqueCity.sort();
 console.log(uniqueCity);
 
 var uniqueShape = Array.from(new Set(sightingshape));
+uniqueShape.sort();
 console.log(uniqueShape);
 
 var uniqueDuration = Array.from(new Set(sightingduration));
+uniqueDuration.sort();
 console.log(uniqueDuration);
 
 
